@@ -1,0 +1,19 @@
+.container {
+	position: relative;
+}
+
+.current_value_container {
+	display: flex;
+	gap: 20px;
+	transition: all 0.2s ease-in-out;
+	color: var(--color-alternative-black);
+	opacity: 60%;
+	font-size: 12px;
+	align-items: center;
+	font-family: var(--font-poppins);
+}
+
+.dropdown_container {
+	position: absolute;
+	margin: 0;
+}

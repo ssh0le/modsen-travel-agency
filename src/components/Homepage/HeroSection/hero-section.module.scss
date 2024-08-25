@@ -1,0 +1,47 @@
+.container {
+	position: relative;
+	height: 700px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.hero_content {
+	padding: 59px 0;
+	padding-right: 16px;
+	background-color: var(--color-white);
+
+	.title {
+		margin-top: 26px;
+		margin-bottom: 23px;
+	}
+
+	.subtitle {
+		margin-bottom: 27px;
+	}
+}
+
+.booking_widget_container {
+	padding: 27px 37px 28px 40px;
+	background-color: var(--color-white);
+	width: 100%;
+}
+
+.play_button_container {
+	display: flex;
+	gap: 18px;
+	align-items: center;
+
+	div {
+		height: 55px;
+		width: 55px;
+		background: var(--color-aquamarine);
+	}
+}
+
+.image_container {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
