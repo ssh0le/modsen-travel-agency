@@ -1,0 +1,71 @@
+@import '../../../styles/variables';
+
+.section_container {
+	background-color: rgba($color-olive, 0.8);
+	height: 650px;
+
+	& > div {
+		padding: 0;
+	}
+}
+
+.content_wrapper {
+	position: relative;
+	width: 100%;
+	padding: 0 $sectionn-padding;
+}
+
+.content_background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	& > img {
+        display: flex;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.content_header {
+    padding-top: 27px;
+    padding-bottom: 71px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading {
+	position: relative;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 14px;
+
+	&::after {
+		position: absolute;
+		content: '';
+		left: 50%;
+		bottom: 0;
+		height: 6px;
+		width: 138px;
+		background-color: var(--color-white);
+		transform: translateX(-50%);
+	}
+}
+
+.subheading {
+	text-align: center;
+}
+
+.rooms {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}

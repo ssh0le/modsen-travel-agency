@@ -3,7 +3,7 @@ import { Dancing_Script, Poppins, Raleway } from 'next/font/google';
 
 import { Header } from '@/components/Header/Header';
 
-import './globals.css';
+import './globals.scss';
 import styles from './layout.module.scss';
 
 export const metadata: Metadata = {

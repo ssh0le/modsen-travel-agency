@@ -1,0 +1,30 @@
+@import '../styles/variables';
+
+:root {
+	--color-dark-white: #{$color-dark-white};
+	--color-white: #{$color-white};
+	--color-olive: #{$color-olive};
+	--color-black: #{$color-black};
+	--color-light-black: #{$color-light-black};
+	--color-alternative-black: #{$color-alternative-black};
+	--color-aquamarine: #{$color-aquamarine};
+}
+
+html {
+	font-family: var(--font-raleway);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
