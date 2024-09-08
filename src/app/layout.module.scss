@@ -2,7 +2,8 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-    background-color: var(--color-white);
+	background-color: var(--color-white);
+	z-index: 10000;
 }
 
 .body {
