@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { Dancing_Script, Poppins, Raleway } from 'next/font/google';
 
+import { Header } from '@/components/Header/Header';
+
 import './globals.css';
+import styles from './layout.module.scss';
 
 export const metadata: Metadata = {
 	title: 'Modsen Travel Agency',
@@ -36,7 +39,12 @@ export default function RootLayout({
 			lang="en"
 			className={`${dancing_script.variable} ${raleway.variable} ${poppins.variable}`}
 		>
-			<body>{children}</body>
+			<body className={styles.body}>
+				<div className={styles.header_container}>
+					<Header />
+				</div>
+				<main className={styles.main}>{children}</main>
+			</body>
 		</html>
 	);
 }

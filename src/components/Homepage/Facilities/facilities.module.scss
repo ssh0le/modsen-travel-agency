@@ -1,0 +1,21 @@
+.container {
+    padding-top: 73px;
+    padding-bottom: 63px;
+}
+
+.title_container {
+    margin-bottom: 49px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.facilities_list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 250px);
+	row-gap: 60px;
+	column-gap: 51px;
+}
