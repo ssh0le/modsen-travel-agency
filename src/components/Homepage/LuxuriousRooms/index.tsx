@@ -5,11 +5,10 @@ import Image from 'next/image';
 import { luxuryRoomsQuery, serverClient } from '@/api';
 import { SectionWrapper } from '@/components/UI/SectionWrapper';
 import { Typography } from '@/components/UI/Typography';
-import { LuxuriousRoomsBackgroundImage } from '@/constants';
+import { LuxuriousRoomsBackgroundImage, skeletonRooms } from '@/constants';
 import { LuxuryRoomsResponse, RoomType } from '@/types';
 
 import { LuxuryRoomCard } from './components/LuxuryRoomCard';
-import { skeletonRooms } from './components/LuxuryRoomCard/constants';
 import { SkeletonLuxuryRoomCard } from './components/LuxuryRoomCard/skeleton';
 import styles from './luxurious-rooms.module.scss';
 

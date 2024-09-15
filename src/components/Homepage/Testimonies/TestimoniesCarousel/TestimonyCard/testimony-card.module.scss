@@ -1,0 +1,75 @@
+.container {
+	height: 470px;
+	width: 486px;
+	background: var(--color-dark-white);
+	border-radius: 10px;
+	padding: 34px 28px 27px;
+	display: flex;
+	flex-direction: column;
+}
+
+.top_section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 69px;
+	flex-shrink: 0;
+	font-family: var(--font-poppins);
+}
+
+.testimony_wrapper {
+	flex-grow: 1;
+	margin-bottom: 60px;
+	text-overflow: ellipsis;
+	text-align: justify;
+}
+
+.testimony_text {
+	display: inline;
+}
+
+.open_quote_container,
+.close_quote_container {
+	width: 22px;
+	position: relative;
+	display: inline-block;
+}
+
+.open_quote_container {
+	& > svg {
+		position: absolute;
+		top: -23px;
+	}
+}
+
+.close_quote_container {
+	& > svg {
+		position: absolute;
+		top: -11px;
+		transform: rotate(180deg);
+	}
+}
+
+.bottom_section {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.author_image_wrapper {
+	height: 42px;
+	width: 42px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.skeleton_wrapper {
+	height: 20px;
+    width: 100%;
+}
+
+.sekeleton_testimony_text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

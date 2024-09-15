@@ -1,1 +1,0 @@
-export const skeletonRooms = new Array(3).fill(null);

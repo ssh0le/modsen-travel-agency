@@ -20,6 +20,19 @@ export interface Room {
 	type: RoomType;
 }
 
+export interface Testimony {
+	id: number;
+	author: string;
+	authorImageId: number;
+	testimony: string;
+	date: string;
+	rating: number;
+}
+
 export interface LuxuryRoomsResponse {
 	rooms: Array<Omit<Room, 'type'>>;
+}
+
+export interface TestimoniesResponse {
+	testimonies: Array<Testimony>;
 }
