@@ -1,4 +1,14 @@
-export type FontSize = '11' | '15' | '17' | '20' | '30' | '40' | '50' | '55';
+export type FontSize =
+	| '11'
+	| '12'
+	| '13'
+	| '15'
+	| '17'
+	| '20'
+	| '30'
+	| '40'
+	| '50'
+	| '55';
 export type FontWeight = '400' | '500' | '600' | '700';
 export type Color =
 	| 'olive'

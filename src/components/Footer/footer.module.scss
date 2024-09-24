@@ -1,0 +1,50 @@
+.section_wrapper {
+	background-color: var(--color-olive);
+	height: 420px;
+
+	& > div {
+		padding: 0;
+		max-width: unset;
+	}
+}
+
+.footer_container {
+	height: 100%;
+	display: grid;
+	grid-column: 1fr 118px;
+}
+
+.section_wrapper footer *:not(input) {
+	color: white;
+}
+
+.top_container {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 90px;
+}
+
+.bottom_container {
+	border-top: 1px solid #d9d9d980;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.agency_description {
+	width: 277px;
+	position: relative;
+	top: -9px;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+}
+
+.newsletter_container {
+	width: 360px;
+}
+
+.newsletter_description {
+	margin-top: 22px;
+	margin-bottom: 16px;
+}

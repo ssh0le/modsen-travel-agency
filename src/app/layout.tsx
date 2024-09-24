@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Dancing_Script, Poppins, Raleway } from 'next/font/google';
 
+import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header/Header';
 
 import './globals.scss';
@@ -44,6 +45,7 @@ export default function RootLayout({
 					<Header />
 				</div>
 				<main className={styles.main}>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	);
