@@ -34,7 +34,7 @@ export const Footer = () => {
 							<h3>
 								<AgencyName fontSize="30" />
 							</h3>
-							<Typography fontSize="12">{AGENCY_DESCRIPTION}</Typography>
+							<Typography fontSize="12" variant='p'>{AGENCY_DESCRIPTION}</Typography>
 						</section>
 						{footerLinkLists.map((listProps) => (
 							<section key={listProps.title}>

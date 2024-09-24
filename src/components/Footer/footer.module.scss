@@ -38,6 +38,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 13px;
+
+	p {
+		text-align: justify;
+	}
 }
 
 .newsletter_container {
@@ -47,4 +51,6 @@
 .newsletter_description {
 	margin-top: 22px;
 	margin-bottom: 16px;
+	width: 234px;
+	text-align: justify;
 }
