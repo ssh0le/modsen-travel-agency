@@ -1,5 +1,7 @@
 import { createElement } from 'react';
 
+import { classNames } from '@/helpers';
+
 import { TypographyProps } from './types';
 import styles from './typography.module.scss';
 
@@ -8,15 +10,19 @@ export const Typography = ({
 	children,
 	fontSize = '15',
 	fontWeight = '400',
-	color = 'black',
+	color,
 	className: outerClassName,
 }: TypographyProps) => {
-	const classNames = [
-		outerClassName,
-		styles[`color-${color}`],
-		styles[`font-weight-${fontWeight}`],
-		styles[`font-size-${fontSize}`],
-	];
-	const className = classNames.join(' ');
-	return createElement(variant, { className }, children);
+	return createElement(
+		variant,
+		{
+			className: classNames(
+				outerClassName,
+				styles[`color-${color ?? 'inherit'}`],
+				styles[`font-weight-${fontWeight}`],
+				styles[`font-size-${fontSize}`]
+			),
+		},
+		children
+	);
 };

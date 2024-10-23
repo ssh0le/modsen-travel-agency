@@ -10,3 +10,16 @@ export const luxuryRoomsQuery = gql`
 		}
 	}
 `;
+
+export const roomsListQuery = gql`
+	query Rooms($filter: RoomsFilters) {
+		rooms(filter: $filter) {
+			id
+			imageSrcId
+			roomsAvailable
+			priceInUsd
+			benefits
+			name
+		}
+	}
+`;

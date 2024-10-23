@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export interface Country {
 	name: string;
 	code: string;
@@ -8,8 +9,8 @@ export interface CountriesResponse {
 }
 
 export enum RoomType {
-	// eslint-disable-next-line no-unused-vars
 	Luxury = 'luxury',
+	Single = 'single',
 }
 
 export interface Room {
@@ -18,6 +19,8 @@ export interface Room {
 	benefits: string[];
 	imageSrcId: number;
 	type: RoomType;
+	priceInUsd: number;
+	name: string;
 }
 
 export interface Testimony {
@@ -30,7 +33,13 @@ export interface Testimony {
 }
 
 export interface LuxuryRoomsResponse {
-	rooms: Array<Omit<Room, 'type'>>;
+	rooms: Array<Pick<Room, 'id' | 'imageSrcId' | 'benefits' | 'roomsAvailable'>>;
+}
+
+export type RoomDescription = Omit<Room, 'type'>;
+
+export interface RoomsListResponse {
+	rooms: Array<RoomDescription>;
 }
 
 export interface TestimoniesResponse {

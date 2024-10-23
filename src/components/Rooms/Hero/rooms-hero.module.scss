@@ -1,0 +1,84 @@
+@import '../../../styles/variables';
+
+.container {
+	height: 700px;
+	position: relative;
+}
+
+.image_background_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	& > img {
+		display: flex;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.image_backdrop {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba($color-olive, 0.5);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 48px;
+	text-align: center;
+	font-family: var(--font-mulish);
+	margin-top: 212px;
+
+	p {
+		line-height: 25px;
+		width: 654px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 25.1px;
+		text-align: center;
+	}
+}
+
+$offset: 10px;
+
+.button {
+	height: 90px;
+	width: 50px;
+	border-radius: 50px;
+	border: 2px solid var(--color-white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&:hover svg {
+		animation-delay: 1s;
+		transition: all 1s linear;
+		transform: translateY(-$offset);
+		animation: jumpInfinite 1.5s infinite;
+	}
+}
+
+@keyframes jumpInfinite {
+	0% {
+		transform: translateY(-$offset);
+	}
+	90% {
+		transform: translateY($offset);
+	}
+	100% {
+		transform: translateY(-$offset);
+	}
+}

@@ -8,8 +8,9 @@ export type FontSize =
 	| '30'
 	| '40'
 	| '50'
-	| '55';
-export type FontWeight = '400' | '500' | '600' | '700';
+	| '55'
+	| '60';
+export type FontWeight = '400' | '500' | '600' | '700' | '800';
 export type Color =
 	| 'olive'
 	| 'dark-white'

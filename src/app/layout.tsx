@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { Dancing_Script, Poppins, Raleway } from 'next/font/google';
+import { Dancing_Script, Mulish, Poppins, Raleway } from 'next/font/google';
 
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header/Header';
+import { classNames } from '@/helpers';
 
 import './globals.scss';
 import styles from './layout.module.scss';
@@ -21,13 +22,19 @@ const dancing_script = Dancing_Script({
 const raleway = Raleway({
 	variable: '--font-raleway',
 	subsets: ['latin'],
-	weight: ['600', '700'],
+	weight: ['400', '600', '700'],
 });
 
 const poppins = Poppins({
 	variable: '--font-poppins',
 	subsets: ['latin'],
-	weight: ['500', '600', '700'],
+	weight: ['400', '500', '600', '700'],
+});
+
+const mulish = Mulish({
+	variable: '--font-mulish',
+	subsets: ['latin'],
+	weight: ['400', '600', '800'],
 });
 
 export default function RootLayout({
@@ -38,7 +45,12 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${dancing_script.variable} ${raleway.variable} ${poppins.variable}`}
+			className={classNames(
+				dancing_script.variable,
+				raleway.variable,
+				poppins.variable,
+				mulish.variable
+			)}
 		>
 			<body className={styles.body}>
 				<div className={styles.header_container}>

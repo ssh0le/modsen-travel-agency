@@ -4,7 +4,24 @@ import styles from './header.module.scss';
 import { HeaderLink } from './HeaderLink';
 import { LanguageSwitch } from './LanguageSwitch';
 
-const navlinks = ['Home', 'Rooms', 'About', 'Contact'];
+const navlinks = [
+	{
+		title: 'Home',
+		href: '/',
+	},
+	{
+		title: 'Rooms',
+		href: '/rooms',
+	},
+	{
+		title: 'About',
+		href: '/about',
+	},
+	{
+		title: 'Contact',
+		href: '/contact',
+	},
+];
 
 export const Header = async () => {
 	return (
@@ -18,9 +35,9 @@ export const Header = async () => {
 
 					<nav>
 						<ul className={styles.link_list}>
-							{navlinks.map((linkTitle) => (
-								<HeaderLink key={linkTitle} href={linkTitle}>
-									{linkTitle}
+							{navlinks.map(({ title, href }) => (
+								<HeaderLink key={title} href={href}>
+									{title}
 								</HeaderLink>
 							))}
 						</ul>

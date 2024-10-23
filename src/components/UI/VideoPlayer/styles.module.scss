@@ -1,0 +1,25 @@
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+	position: relative;
+	background-color: black;
+}
+
+.toggler-container {
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.player {
+	height: 100%;
+	width: 100%;
+}

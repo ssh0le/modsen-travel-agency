@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.container,
+.content {
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 130px;
+	height: 130px;
+	background-color: rgba($color-white, 0.8);
+}
+
+.content {
+	width: 76px;
+	height: 76px;
+	background-color: rgba($color-white, 0.9);
+	color: $color-olive;
+
+	svg {
+		height: 32px;
+		width: 24px;
+	}
+}
