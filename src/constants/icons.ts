@@ -3,6 +3,7 @@ import { BreakfastIcon } from '@/assets/icons/breakfast';
 import CalendarIcon from '@/assets/icons/calendar.svg';
 import ChevronIcon from '@/assets/icons/chevron.svg';
 import { GymIcon } from '@/assets/icons/gym';
+import HalfStar from '@/assets/icons/half-star.svg';
 import { JoystickIcon } from '@/assets/icons/joystick';
 import { LaundryIcon } from '@/assets/icons/laundry';
 import { LightIcon } from '@/assets/icons/light';
@@ -16,6 +17,7 @@ import QuotesIcon from '@/assets/icons/quotes.svg';
 import PlayIcon from '@/assets/icons/resume.svg';
 import RoomTypeIcon from '@/assets/icons/room_type.svg';
 import ShowerIcon from '@/assets/icons/shower.svg';
+import Star from '@/assets/icons/star.svg';
 import { SwimmingPoolIcon } from '@/assets/icons/swimming_pool';
 import TriangleIcon from '@/assets/icons/triangle.svg';
 import TvIcon from '@/assets/icons/tv.svg';
@@ -47,6 +49,8 @@ export const homepageBookIcons = [
 	CalendarIcon,
 	CalendarIcon,
 ];
+
+export const ratingIcons = { Star, HalfStar };
 
 export const facilitiesIcons = [
 	SwimmingPoolIcon,

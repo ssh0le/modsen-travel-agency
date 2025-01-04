@@ -1,6 +1,5 @@
-import Image from 'next/image';
-
-import { SectionWrapper, Typography } from '@/components/UI';
+import { SectionWithBackgroundImage } from '@/components/SectionWithBackgroundImage';
+import { Typography } from '@/components/UI';
 import { ArrowDown, RoomsHeroImage } from '@/constants';
 
 import styles from './rooms-hero.module.scss';
@@ -14,22 +13,22 @@ const staticText = {
 export const RoomsHero = () => {
 	const { title, subtitle } = staticText;
 	return (
-		<SectionWrapper className={styles.container}>
-			<div className={styles.image_background_container}>
-				<Image src={RoomsHeroImage} alt={'hero'} />
-				<div className={styles.image_backdrop} />
-			</div>
+		<SectionWithBackgroundImage
+			className={styles.container}
+			imageSrc={RoomsHeroImage}
+			imageAlt={'hero'}
+		>
 			<div className={styles.content}>
-				<Typography fontSize="60" fontWeight='800' color="white" variant="h2">
+				<Typography fontSize="60" fontWeight="800" color="white" variant="h2">
 					{title}
 				</Typography>
-				<Typography color="white" variant="p" fontSize='20'>
+				<Typography color="white" variant="p" fontSize="20">
 					{subtitle}
 				</Typography>
 				<div className={styles.button}>
 					<ArrowDown />
 				</div>
 			</div>
-		</SectionWrapper>
+		</SectionWithBackgroundImage>
 	);
 };

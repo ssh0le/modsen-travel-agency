@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.container {
+	position: relative;
+}
+
+.image_background_container {
+    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	& > img {
+		display: flex;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.image_backdrop {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba($color-olive, 0.5);
+}

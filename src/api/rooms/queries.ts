@@ -23,3 +23,28 @@ export const roomsListQuery = gql`
 		}
 	}
 `;
+
+export const roomsIdListQuery = gql`
+	query Rooms($filter: RoomsFilters) {
+		rooms(filter: $filter) {
+			id
+		}
+	}
+`;
+
+export const detailedRoomQuery = gql`
+	query Room($filter: DetailedRoomFilters) {
+		room(filter: $filter) {
+			id
+			description
+			type
+			name
+			reviewsCount
+			rating
+			price {
+				usd
+				ngn
+			}
+		}
+	}
+`;

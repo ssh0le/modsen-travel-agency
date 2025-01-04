@@ -4,7 +4,7 @@ import { Typography } from '@/components/UI/Typography';
 import styles from './testimonies.module.scss';
 import { TestimoniesCarousel } from './TestimoniesCarousel';
 
-export const Testimpones = () => {
+export const Testimonies = () => {
 	return (
 		<SectionWrapper className={styles.section_wrapper}>
 			<div className={styles.content_wrapper}>

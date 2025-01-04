@@ -1,0 +1,45 @@
+.section_wrapper {
+	padding-top: 114px;
+
+	& > div {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.description_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: var(--font-poppins);
+
+	h2 {
+		line-height: 63px;
+	}
+}
+
+span.price_wrapper {
+	color: #9f9f9f;
+}
+
+.rating_container {
+	display: flex;
+	gap: 18px;
+
+	span {
+		color: #9f9f9f;
+		position: relative;
+        padding-left: 22px;
+
+		&:before {
+			content: '';
+            left: 0;
+            top: 0;
+			display: block;
+			position: absolute;
+			height: 100%;
+			width: 1px;
+            background-color: #9f9f9f;
+		}
+	}
+}

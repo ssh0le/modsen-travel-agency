@@ -1,0 +1,55 @@
+$background_color: #f9f1e7;
+$selected_color: #{darken($background_color, 15%)};
+$hover_color: #{darken($background_color, 5%)};
+
+.gallery_container {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	width: 100%;
+	height: 100%;
+}
+
+.gallery_list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.gallery_list_item {
+	width: 76px;
+	height: 79px;
+	border-radius: 10px;
+	background-color: $background_color;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover_color;
+    }
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		display: block;
+		width: auto;
+		height: auto;
+	}
+}
+
+.gallery_list_item.selected {
+	background-color: $selected_color;
+}
+
+.main_image_container {
+	height: 494px;
+	width: 424px;
+	border-radius: 10px;
+	background-color: $background_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

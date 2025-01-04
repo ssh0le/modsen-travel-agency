@@ -23,6 +23,21 @@ export interface Room {
 	name: string;
 }
 
+interface RoomPrice {
+	usd: number;
+	ngn: number;
+}
+
+export interface DetailedRoom {
+	id: number;
+	description: string;
+	type: RoomType;
+	name: string;
+	price: RoomPrice;
+	reviewsCount: number;
+	rating: number;
+}
+
 export interface Testimony {
 	id: number;
 	author: string;
@@ -44,4 +59,8 @@ export interface RoomsListResponse {
 
 export interface TestimoniesResponse {
 	testimonies: Array<Testimony>;
+}
+
+export interface DetailedRoomResponse {
+	room: DetailedRoom | null;
 }

@@ -1,0 +1,11 @@
+.star_rating_container {
+	width: 124px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+}
