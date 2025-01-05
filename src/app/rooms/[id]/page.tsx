@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import { detailedRoomQuery, roomsIdListQuery, serverClient } from '@/api';
 import { RoomDetails } from '@/components/RoomDetails';
 import { RoomDetailsHero } from '@/components/RoomDetails/Hero';
@@ -29,7 +31,11 @@ export default async function Page({ params }: { params: { id: string } }) {
 		},
 	});
 
-	console.log('0000000000000000000000000', data, loading);
+	console.log('DATA', data);
+
+	if (data.room === null) {
+		notFound();
+	}
 
 	return (
 		<div>

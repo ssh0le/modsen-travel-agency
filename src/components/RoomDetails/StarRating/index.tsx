@@ -7,7 +7,7 @@ const { HalfStar, Star } = ratingIcons;
 export const StarRating = ({ rating }: { rating: number | string }) => {
 	const parsedRating = parseFloat(rating.toString()) || 0;
 	const integerRating = Math.floor(parsedRating);
-	const hasHalfStar = parsedRating % 1 > 0.5;
+	const hasHalfStar = parsedRating % 1 >= 0.5;
 
 	const stars = new Array(integerRating).fill(Star);
 

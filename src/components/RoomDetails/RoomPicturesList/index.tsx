@@ -7,7 +7,7 @@ import styles from './interior-pictures.module.scss';
 
 export const RoomPicturesList = () => {
 	return (
-		<SectionWrapper>
+		<SectionWrapper className={styles.section_wrapper}>
 			<div className={styles.list_wrapper}>
 				{interiorImages.map((image, index) => (
 					<div key={index} className={styles.picture_container}>

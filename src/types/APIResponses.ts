@@ -35,7 +35,7 @@ export interface DetailedRoom {
 	name: string;
 	price: RoomPrice;
 	reviewsCount: number;
-	rating: number;
+	rating: number | null;
 }
 
 export interface Testimony {

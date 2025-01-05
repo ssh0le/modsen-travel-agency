@@ -6,7 +6,7 @@ import { StarRating } from './StarRating';
 import { RoomDetailsProps } from './types';
 
 export const RoomDetails = ({ data, loading }: RoomDetailsProps) => {
-	if (!data || loading || !data.price) {
+	if (!data || loading) {
 		return null;
 	}
 
@@ -17,7 +17,7 @@ export const RoomDetails = ({ data, loading }: RoomDetailsProps) => {
 			<div>
 				<Gallery />
 			</div>
-			<div>
+			<div className={styles.right_side}>
 				<div className={styles.description_wrapper}>
 					<Typography fontSize="42" variant="h2">
 						{name}
@@ -30,16 +30,23 @@ export const RoomDetails = ({ data, loading }: RoomDetailsProps) => {
 						₦{Math.round(price.ngn)}
 					</Typography>
 					<div className={styles.rating_container}>
-						<StarRating rating={rating.toFixed(1)} />
-						<Typography fontSize="13">
-							{reviewsCount} Customer Review
-						</Typography>
+						{rating && <StarRating rating={rating.toFixed(1)} />}
+						{reviewsCount > 0 && (
+							<Typography fontSize="13" className={styles.with_delimiter}>
+								{reviewsCount} Customer Review
+							</Typography>
+						)}
+						{reviewsCount === 0 && (
+							<Typography fontSize="13">No reviews</Typography>
+						)}
 					</div>
 					<Typography fontSize="13" variant="p">
 						{description}
 					</Typography>
 				</div>
-				<Button>Reservation</Button>
+				<Button fontSize="20" className={styles.reservation_button}>
+					Reservation
+				</Button>
 			</div>
 		</SectionWrapper>
 	);

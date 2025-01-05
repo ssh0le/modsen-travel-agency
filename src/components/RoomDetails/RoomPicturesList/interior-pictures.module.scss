@@ -1,3 +1,7 @@
+.section_wrapper {
+    padding-bottom: 268px;
+}
+
 .list_wrapper {
     display: flex;
     justify-content: space-between;
@@ -11,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 
     img {
         height: 100%;
